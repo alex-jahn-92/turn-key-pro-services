@@ -1,0 +1,340 @@
+/* ========= GLOBAL VARIABLES ========= */
+:root {
+  --primary-yellow: #FFC107;
+  --primary-yellow-dark: #FFA000;
+  --dark-text: #333;
+  --white-text: #FFF;
+}
+
+/* ========= GLOBAL STYLES ========= */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark-text);
+  background-color: #fff;
+  background-image: url('../images/house.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ========= NAVBAR ========= */
+.navbar {
+  background-color: var(--primary-yellow) !important;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+.navbar .nav-link {
+  color: var(--white-text) !important;
+  font-weight: 500;
+}
+.navbar .nav-link:hover {
+  color: var(--dark-text) !important;
+}
+.navbar-toggler {
+  border-color: var(--white-text) !important;
+}
+.nav-scroll {
+  background-color: var(--primary-yellow-dark) !important;
+}
+
+/* ========= BANNER ========= */
+.banner {
+  background-color: var(--primary-yellow);
+  color: var(--white-text);
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+}
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.banner h6 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+.banner .cta-button {
+  background-color: var(--primary-yellow-dark);
+  color: var(--white-text);
+  padding: 12px 25px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.banner .cta-button:hover {
+  background-color: var(--primary-yellow);
+  color: var(--dark-text);
+}
+
+/* ========= SECTION HEADINGS ========= */
+.sectioner-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.sectioner-header h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.sectioner-header .line {
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-yellow-dark);
+  margin: 0 auto 20px;
+}
+
+/* ========= SPACING & SECTION PADDING ========= */
+section {
+  padding-top: 80px; /* Ensures consistent spacing */
+}
+.section-padding {
+  padding: 80px 0;
+}
+@media (max-width: 768px) {
+  .section-padding {
+      padding: 60px 0;
+  }
+}
+
+/* ========= QUOTE SECTION ========= */
+.quote-section {
+  background-color: var(--primary-yellow-dark);
+  color: var(--white-text);
+  padding: 15px 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+/* ========= ICON BOXES ========= */
+.icon-box {
+  background-color: #FFF;
+  border: 2px solid var(--primary-yellow-dark);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.icon-box:hover {
+  transform: translateY(-5px);
+}
+.icon-box i {
+  color: var(--primary-yellow-dark);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ========= VIDEO SECTION ========= */
+.video-section {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #FFF7E6; /* Light background for contrast */
+}
+
+/* Center the video */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Adjust Video Size */
+.video-embed {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 1024px) {
+  .video-embed {
+    width: 60%;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-embed {
+    width: 75%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-embed {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+/* ========= QUALIFICATION SECTION ========= */
+.qualification-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.qualification-section p {
+  line-height: 1.8;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .qualification-section {
+      max-width: 90%;
+  }
+}
+
+/* ========= FOOTER ========= */
+.footer-copy {
+  background-color: var(--primary-yellow);
+  color: var(--white-text);
+  text-align: center;
+  padding: 20px 0;
+}
+.footer-copy a {
+  color: var(--white-text);
+  text-decoration: underline;
+}
+.footer-copy a:hover {
+  color: #222;
+}
+/* ========= VIDEO SECTION ========= */
+.video-section {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #FFF7E6; /* Light background for contrast */
+}
+
+/* Center the video */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* ✅ Increase Video Size */
+.video-embed {
+  width: 70%; /* Increase size */
+  max-width: 750px; /* Allow larger width */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 1024px) {
+  .video-embed {
+    width: 80%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-embed {
+    width: 85%;
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-embed {
+    width: 95%;
+    max-width: 600px;
+  }
+}
+/* ========= GLOBAL SECTION SPACING ========= */
+section {
+  padding-top: 300px !important; /* Increase spacing at the top */
+  padding-bottom: 300px !important; /* Increase spacing at the bottom */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  section {
+      padding-top: 80px !important; /* Adjust for smaller devices */
+      padding-bottom: 80px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+      padding-top: 60px !important; /* Further adjust for mobile */
+      padding-bottom: 60px !important;
+  }
+}
+/* ========= FORCE SECTION SPACING ========= */
+section {
+  padding-top: 120px !important; /* Increase top padding */
+  padding-bottom: 120px !important; /* Increase bottom padding */
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* Fix for Bootstrap Row Issues */
+.row {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  section {
+      padding-top: 80px !important;
+      padding-bottom: 80px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+      padding-top: 60px !important;
+      padding-bottom: 60px !important;
+  }
+}
+/* ========= FORCE SECTION SPACING ========= */
+section {
+  padding-top: 120px !important; /* Increase top padding */
+  padding-bottom: 120px !important; /* Increase bottom padding */
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* Fix for Bootstrap Row Issues */
+.row {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  section {
+      padding-top: 80px !important;
+      padding-bottom: 80px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+      padding-top: 60px !important;
+      padding-bottom: 60px !important;
+  }
+}

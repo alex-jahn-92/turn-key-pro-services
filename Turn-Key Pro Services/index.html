@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Turn Key Pro Services</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+  <!-- Override old purple colors with a new yellow color scheme -->
+  <style>
+    /* Global Colors */
+    :root {
+      /* Primary yellow color - adjust as needed */
+      --primary-yellow: #FFC107;
+      /* A slightly darker yellow/gold for accents or hover states */
+      --primary-yellow-dark: #FFA000;
+      /* Text color on yellow backgrounds */
+      --dark-text: #333;
+      /* White text if needed on dark backgrounds */
+      --white-text: #FFF;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--primary-yellow) !important;
+    }
+    .navbar .nav-link {
+      color: var(--white-text) !important;
+    }
+    .navbar .nav-link:hover {
+      color: var(--dark-text) !important;
+    }
+    .navbar-toggler {
+      border-color: var(--white-text) !important;
+    }
+    .navbar-toggler .fas.fa-bars {
+      color: var(--white-text) !important;
+    }
+
+    /* Banner */
+    .banner {
+      background-color: var(--primary-yellow) !important;
+      color: var(--dark-text) !important;
+    }
+    .banner-text.white {
+      color: var(--white-text) !important;
+    }
+    .banner-overlay {
+      background: rgba(0,0,0,0.1);
+    }
+    .svg-hero {
+      display: none;
+    }
+
+    /* Headings */
+    .line {
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: var(--primary-yellow-dark);
+      margin: 20px auto;
+    }
+
+    /* Buttons */
+    .cta-button {
+      background-color: var(--primary-yellow-dark) !important;
+      color: var(--white-text) !important;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .cta-button:hover {
+      background-color: var(--primary-yellow) !important;
+      color: var(--dark-text) !important;
+    }
+
+    /* Icon Boxes & Other Sections */
+    .icon-box {
+      background-color: #FFF;
+      border: 2px solid var(--primary-yellow-dark);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      color: var(--dark-text);
+    }
+    .icon-box i {
+      color: var(--primary-yellow-dark);
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature,
+    .contact,
+    .team,
+    .about {
+      background-color: #FFF;
+      color: var(--dark-text);
+    }
+
+    .btn-grad {
+      background: linear-gradient(90deg, var(--primary-yellow-dark), var(--primary-yellow));
+      border: none;
+      color: var(--dark-text);
+      text-transform: uppercase;
+    }
+    .btn-grad:hover {
+      background: linear-gradient(90deg, var(--primary-yellow), var(--primary-yellow-dark));
+      color: var(--white-text);
+    }
+
+    .contact-info.white {
+      color: var(--dark-text);
+    }
+    .contact-info.white a {
+      color: var(--dark-text);
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer-copy {
+      background-color: var(--primary-yellow);
+      color: var(--white-text);
+      padding: 20px 0;
+      text-align: center;
+    }
+    .footer-copy a {
+      color: var(--white-text);
+      text-decoration: underline;
+    }
+
+    /* Navbar Scroll */
+    .nav-scroll {
+      background-color: var(--primary-yellow-dark) !important;
+    }
+
+    /* FAQ Section Styles */
+    .faq {
+        background-color: #fff;
+        padding: 80px 0;
+    }
+
+    .accordion-item {
+        border: 1px solid #eee;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .accordion-button {
+        padding: 20px;
+        font-weight: 600;
+        color: var(--dark-text);
+        background-color: #fff;
+        border: none;
+        position: relative;
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: var(--primary-yellow-dark);
+        background-color: rgba(255, 193, 7, 0.1);
+    }
+
+    .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23333'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        transform: rotate(-180deg);
+    }
+
+    .accordion-body {
+        padding: 20px;
+        background-color: #fff;
+        color: #666;
+    }
+
+    .accordion-body ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .accordion-body ul li {
+        padding: 5px 0;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .accordion-body ul li:before {
+        content: "•";
+        color: var(--primary-yellow-dark);
+        position: absolute;
+        left: 0;
+    }
+
+    .faq-cta {
+        background: #f8f9fa;
+        padding: 40px;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+
+    .faq-cta h4 {
+        color: var(--dark-text);
+        margin-bottom: 15px;
+    }
+
+    .faq-cta p {
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 568px) {
+        .accordion-button {
+            padding: 15px;
+        }
+        
+        .accordion-body {
+            padding: 15px;
+        }
+    }
+
+    /* Add these specific styles to control the navbar logo size */
+    .navbar-brand.navbar-logo img {
+        width: 125px !important; /* This is half of the current 250px */
+        height: auto !important;
+        max-width: 125px !important;
+    }
+
+    /* Center the navigation items */
+    .navbar-nav {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ensure proper spacing */
+    .navbar-brand {
+        margin-bottom: 10px;
+    }
+
+    /* Direct control of the logo size with circular shape */
+    .company-logo {
+        width: 244px !important;
+        height: 244px !important; /* Making height equal to width for perfect circle */
+        max-width: 244px !important;
+        display: block !important;
+        border-radius: 50% !important; /* Makes the image circular */
+        object-fit: cover !important; /* Ensures the image fills the circle without distortion */
+        border: 3px solid var(--primary-yellow-dark) !important; /* Optional: adds a border */
+    }
+
+    /* Update container to match new size */
+    .logo-container {
+        width: 244px !important;
+        height: 244px !important;
+        margin: 0 auto !important;
+        border-radius: 50% !important;
+        overflow: hidden !important; /* Ensures the image stays within the circular boundary */
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    /* Navigation container styles */
+    .nav-container {
+        width: 100% !important;
+        background-color: var(--primary-yellow-dark) !important;
+        padding: 15px 0 !important;
+    }
+
+    /* Inner navigation wrapper */
+    .nav-inner {
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+    }
+
+    /* Navigation menu list */
+    .nav-menu {
+        display: flex !important;
+        justify-content: space-between !important; /* This evenly spaces the items */
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    /* Individual menu items */
+    .nav-menu li {
+        flex: 1 !important; /* Makes each item take equal space */
+        text-align: center !important;
+    }
+
+    .nav-menu li a {
+        color: white !important;
+        text-decoration: none !important;
+        font-size: 16px !important;
+        padding: 10px 15px !important;
+        display: block !important;
+        transition: all 0.3s ease !important;
+    }
+
+    /* Hover effect */
+    .nav-menu li a:hover {
+        color: var(--dark-text) !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .nav-menu {
+            flex-direction: column !important;
+            gap: 10px !important;
+        }
+        
+        .nav-menu li {
+            width: 100% !important;
+        }
+    }
+
+    /* Add to your existing styles */
+    .section-padding:nth-child(even) {
+        background-color: #f8f9fa !important;
+    }
+
+    .section-padding:nth-child(odd) {
+        background: linear-gradient(135deg, #fff 0%, #f0f8ff 100%) !important;
+    }
+
+    /* Add subtle pattern overlay */
+    .section-pattern {
+        position: relative;
+    }
+
+    .section-pattern::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .info-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+        color: var(--primary-yellow);
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    /* Add decorative dividers between sections */
+    .section-divider {
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-yellow-dark) 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section-divider::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, transparent 75%, transparent);
+        background-size: 30px 30px;
+        animation: moveStripes 30s linear infinite;
+    }
+
+    @keyframes moveStripes {
+        0% { background-position: 0 0; }
+        100% { background-position: 60px 0; }
+    }
+
+    /* Add hover effects to make sections more interactive */
+    .feature-box {
+        padding: 30px;
+        border-radius: 10px;
+        background: white;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .feature-box:hover {
+        border-color: var(--primary-yellow);
+        transform: scale(1.02);
+    }
+
+    /* Animated icons */
+    .animated-icon {
+        font-size: 2rem;
+        color: var(--primary-yellow-dark);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover .animated-icon {
+        transform: rotate(360deg);
+    }
+
+    /* Make text more readable and engaging */
+    .content-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .highlight-text {
+        background: linear-gradient(120deg, rgba(255, 193, 7, 0.2) 0%, rgba(255, 193, 7, 0.2) 100%);
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+
+    /* Add subtle image overlays for visual interest */
+    .section-with-bg {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .section-with-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+    }
+
+    /* Add smooth animations when sections come into view */
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+    }
+
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Enhanced Section Styling with Theme Colors */
+    /* Add this to your existing styles */
+
+    /* About Section Enhancement */
+    .about {
+        background: linear-gradient(135deg, #fff 0%, rgba(255, 193, 7, 0.1) 100%) !important;
+    }
+
+    .about .icon-box {
+        background: white !important;
+        border: none !important;
+        box-shadow: 0 5px 15px rgba(255, 193, 7, 0.1) !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .about .icon-box::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 5px !important;
+        height: 100% !important;
+        background: var(--primary-yellow) !important;
+    }
+
+    /* Services Section Enhancement */
+    .feature {
+        background: linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, #fff 100%) !important;
+    }
+
+    .service-box {
+        border-radius: 15px !important;
+        background: white !important;
+        box-shadow: 0 5px 20px rgba(255, 193, 7, 0.1) !important;
+        border-bottom: 3px solid var(--primary-yellow) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .service-box:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 8px 25px rgba(255, 193, 7, 0.2) !important;
+    }
+
+    /* Team/Why Choose Us Section Enhancement */
+    .team {
+        background: linear-gradient(45deg, #fff 0%, rgba(255, 193, 7, 0.15) 100%) !important;
+    }
+
+    /* Section Headers Enhancement */
+    .sectioner-header h3 {
+        color: var(--dark-text) !important;
+        position: relative !important;
+        display: inline-block !important;
+        padding: 0 15px !important;
+    }
+
+    .sectioner-header h3::before,
+    .sectioner-header h3::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 50% !important;
+        width: 30px !important;
+        height: 2px !important;
+        background: var(--primary-yellow) !important;
+    }
+
+    .sectioner-header h3::before {
+        left: -35px !important;
+    }
+
+    .sectioner-header h3::after {
+        right: -35px !important;
+    }
+
+    /* Content Box Enhancement */
+    .content-box {
+        background: white !important;
+        border-radius: 15px !important;
+        padding: 30px !important;
+        margin: 20px 0 !important;
+        border: 1px solid rgba(255, 193, 7, 0.2) !important;
+        position: relative !important;
+    }
+
+    .content-box::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 3px !important;
+        background: linear-gradient(90deg, var(--primary-yellow) 0%, var(--primary-yellow-dark) 100%) !important;
+        border-radius: 0 0 15px 15px !important;
+    }
+
+    /* Section Dividers */
+    .section-separator {
+        height: 60px !important;
+        background: linear-gradient(90deg, var(--primary-yellow) 0%, var(--primary-yellow-dark) 100%) !important;
+        opacity: 0.1 !important;
+        margin: 40px 0 !important;
+    }
+
+    /* Feature List Enhancement */
+    .feature-list li {
+        position: relative !important;
+        padding-left: 25px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .feature-list li::before {
+        content: '✓' !important;
+        position: absolute !important;
+        left: 0 !important;
+        color: var(--primary-yellow-dark) !important;
+        font-weight: bold !important;
+    }
+
+    /* Quote Sections Enhancement */
+    .quote-section {
+        background: var(--primary-yellow) !important;
+        padding: 40px !important;
+        border-radius: 15px !important;
+        margin: 30px 0 !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .quote-section::before {
+        content: '"' !important;
+        position: absolute !important;
+        top: -20px !important;
+        left: 20px !important;
+        font-size: 120px !important;
+        color: rgba(255, 255, 255, 0.1) !important;
+        font-family: serif !important;
+    }
+
+    .quote-section p {
+        color: white !important;
+        font-style: italic !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+
+    /* Add this form to your consultation section */
+    .consultation-form {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .consultation-form .form-group {
+        margin-bottom: 20px;
+    }
+
+    .consultation-form .form-control {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .consultation-form .form-control:focus {
+        border-color: var(--primary-yellow);
+        box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+    }
+
+    .consultation-form .cta-button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Success message styling */
+    .form-success {
+        background: #d4edda;
+        color: #155724;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        display: none;
+    }
+
+    /* Error message styling */
+    .form-error {
+        background: #f8d7da;
+        color: #721c24;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        display: none;
+    }
+
+    /* Subscription Journey Section */
+    .journey-section {
+        background: linear-gradient(135deg, #fff 0%, rgba(255, 193, 7, 0.1) 100%);
+        padding: 80px 0;
+        position: relative;
+    }
+
+    .journey-timeline {
+        max-width: 1000px;
+        margin: 60px auto;
+        position: relative;
+        padding: 20px 0;
+    }
+
+    .journey-timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background: var(--primary-yellow);
+        opacity: 0.3;
+    }
+
+    .journey-step {
+        display: flex;
+        margin-bottom: 50px;
+        position: relative;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .journey-step:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-yellow);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--dark-text);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        border: 3px solid white;
+    }
+
+    .step-content {
+        width: calc(50% - 30px);
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    .step-content:hover {
+        transform: translateY(-5px);
+    }
+
+    .step-icon {
+        font-size: 2.5rem;
+        color: var(--primary-yellow);
+        margin-bottom: 20px;
+    }
+
+    .step-content h4 {
+        color: var(--dark-text);
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .step-details ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .step-details li {
+        padding: 5px 0;
+        padding-left: 25px;
+        position: relative;
+    }
+
+    .step-details li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--primary-yellow-dark);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .journey-cta {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-top: 60px;
+    }
+
+    .journey-cta h4 {
+        margin-bottom: 20px;
+        color: var(--dark-text);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .journey-timeline::before {
+            left: 20px;
+        }
+
+        .journey-step {
+            flex-direction: row !important;
+        }
+
+        .step-number {
+            left: 20px;
+        }
+
+        .step-content {
+            width: calc(100% - 50px);
+            margin-left: 50px;
+        }
+    }
+
+    /* Footer Section */
+    .main-footer {
+        background-color: var(--primary-yellow);
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .social-links {
+        margin-bottom: 10px;
+    }
+
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        color: var(--primary-yellow);
+        font-size: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        color: var(--primary-yellow-dark);
+    }
+
+    .copyright-text {
+        color: white;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .footer-content {
+            padding: 0 20px;
+        }
+    }
+
+    /* Copyright Section */
+    .copyright-section {
+        background-color: var(--primary-yellow);
+        color: white;
+        padding: 10px 0;
+        font-size: 14px;
+        margin-top: 40px;
+    }
+
+    .copyright-section a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .copyright-section a:hover {
+        text-decoration: underline;
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown-menu {
+        background-color: var(--primary-yellow) !important;
+        border: none !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+        padding: 10px 0 !important;
+        min-width: 200px !important;
+    }
+
+    .dropdown-item {
+        color: var(--white-text) !important;
+        padding: 8px 20px !important;
+        font-size: 14px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .dropdown-item:hover {
+        background-color: var(--primary-yellow-dark) !important;
+        color: var(--dark-text) !important;
+    }
+
+    .dropdown-item i {
+        margin-right: 10px !important;
+        width: 20px !important;
+        text-align: center !important;
+    }
+
+    .dropdown-divider {
+        border-top: 1px solid rgba(255,255,255,0.2) !important;
+        margin: 8px 0 !important;
+    }
+
+    .dropdown-toggle::after {
+        margin-left: 8px !important;
+    }
+
+    .nav-link.dropdown-toggle {
+        color: var(--white-text) !important;
+    }
+
+    .nav-link.dropdown-toggle:hover {
+        color: var(--dark-text) !important;
+    }
+  </style>
+</head>
+
+<body>
+ <!-- Simple Centered Header -->
+<header class="main-header">
+    <!-- Logo Container with strict size control -->
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/FB_IMG_1741285493669.jpg" 
+             alt="Turn-Key Pro Services Logo" 
+             class="company-logo">
+      </div>
+    </div>
+    
+    <!-- Navigation with forced center alignment -->
+    <div class="nav-container">
+      <div class="nav-inner">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why-choose-us.html">Why Choose Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> Account
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+              <a class="dropdown-item" href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+
+  <!-------Banner Start------->
+  <section class="banner" data-scroll-index='0'>
+    <div class="banner-overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-12">
+            <div class="banner-text">
+              <h1 class="white display-4">Never Worry About Home Repairs Again</h1>
+              <h6 class="white lead mb-4">Simplifying Homeownership Through Subscription-Based Repairs & Maintenance</h6>
+              
+              <div class="social-proof mb-4">
+                <div class="rating">
+                  <span class="star">★★★★★</span>
+                  <span class="rating-text white">Trusted by Local Homeowners</span>
+                </div>
+              </div>
+
+              <div class="value-props mb-4">
+                <div class="value-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span class="white">Fixed Monthly Pricing from $119</span>
+                </div>
+                <div class="value-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span class="white">24/7 Emergency Support</span>
+                </div>
+                <div class="value-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span class="white">Professional, Vetted Technicians</span>
+                </div>
+              </div>
+
+              <div class="cta-container">
+                <a href="https://buy.stripe.com/7sI2bLaQj73zeK4289" data-scroll-nav="5" class="cta-button pulse-animation">
+                  Start Your Protection Plan Today
+                </a>
+                <p class="mt-2 white">
+                  <small><i class="fas fa-clock"></i> Limited Spots Available</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <!-- Removed new_phone.png image -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="svg-wave"> 
+      <!-- The wave was removed or hidden in the CSS if it was purple -->
+      <img class="svg-hero" src="images/applight-wave.svg" alt="Wave"> 
+    </span>
+  </section>
+  <!-------Banner End-------> 
+
+  <!-------About Start------->
+  <section class="about section-padding prelative" data-scroll-index='1'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>Welcome to Turn-Key Pro Services!</h3>
+            <span class="line"></span>
+            <p>
+                we're revolutionizing homeownership by taking the hassle out of repairs and maintenance. With our innovative subscription-based service, you can enjoy peace of mind knowing your home is always in top shape—without the stress of unexpected repair bills. Don't wait until emergencies strike; secure your household's spot today and experience effortless, reliable home care that lets you focus on what truly matters. Claim your exclusive spot now before it's too late!"
+            </p>
+            <div class="mt-4">
+              <a href="https://buy.stripe.com/7sI2bLaQj73zeK4289" class="cta-button">
+                Get Started with Bronze Plan - $119/month
+              </a>
+            </div>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                  <i class="fa fa-life-ring" aria-hidden="true"></i>
+                  <h5>Support</h5>
+                  <p>We provide 24/7 emergency repair services to ensure your home is always in top condition.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                  <i class="fas fa-wrench" style="font-size: 2.5rem; color: var(--primary-yellow-dark) !important;"></i>
+                  <h5>Expert Technicians </h5>
+                  <p>Our skilled and vetted professionals handle everything from mechanical to strucural repairs.</p>
+                </div>
+              </div>
+              
+              
+              
+              
+              
+              
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s">
+                  <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+                  <h5>Scheduled Maintenance</h5>
+                  <p>Enjoy the convenience of routine maintenance tailored to your schedule.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+  <!-------About End-------> <!-------Services Start------->
+<section class="feature section-padding" data-scroll-index="2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>A subscription-based service?</h3>
+          <span class="line"></span>
+          <p>
+            Yes! That's what we said...however this subscription is important. We offer a comprehensive suite of services designed to keep your home in pristine condition year-round. From routine maintenance and preventative check-ups to prompt emergency repairs and specialized improvements, our expert team handles everything—from plumbing and electrical work to Carpentry Restoration and cosmetic upgrades. Our proactive approach ensures that every corner of your home is well-cared-for, allowing you to enjoy a safe, comfortable, and beautifully maintained living space without the stress of unexpected repairs. Essentially, our subscribers enjoy continuous upkeep without the hassle – it's like having home insurance for Repairs & Maintenance!
+          </p>
+        </div>
+        
+        <!-- New "How It Works" Section -->
+        <!-- "How It Works" Section -->
+<!-- "How It Works" Section -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="sectioner-header text-center">
+      <h3>How It Works</h3>
+      <span class="line"></span>
+      <p>
+        When you subscribe to one of our Bronze, Silver, or Gold packages, our management 
+        department will contact you for an initial meeting. We begin with a full home 
+        inspection to assess the areas in need of repair. Next, our specialist develops 
+        a detailed action plan tailored to your property, which is then sent to a 
+        project manager for scheduling. It's as simple as that – once the plan is in 
+        place, all you need to do is wait for the repairs to begin around your home! Just maintain you're active monthly account and we'll keep sending our handy person.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+      
+      <!-- Services Section -->
+      <div class="section-content text-center">
+        <div class="row justify-content-center">
+            <!-- Monthly Subscriptions -->
+            <div class="section-content text-center">
+              <div class="row justify-content-center">
+                  <!-- Monthly Subscriptions -->
+                  <div class="section-content text-center">
+                    <div class="row justify-content-center">
+                        <!-- Monthly Subscriptions -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                                <i class="fas fa-calendar-check service-icon"></i>
+                                <h5>Monthly Subscriptions</h5>
+                                <p>3 Tier Monthly packages: <strong>Bronze $119, Silver $149, Gold $225</strong>.</p>
+                            </div>
+                        </div>
+                
+                        <!-- Emergency Repairs -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                                <i class="fas fa-tools service-icon"></i>
+                                <h5>Emergency Repairs</h5>
+                                <p>Priority service for urgent repairs, with one-time options for non-subscribers.</p>
+                            </div>
+                        </div>
+                
+                        <!-- Home Improvement -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+                                <i class="fas fa-home service-icon"></i>
+                                <h5>Home Improvement</h5>
+                                <p>Expert guidance on upgrades, renovations, and energy efficiency.</p>
+                            </div>
+                        </div>
+                
+                        <!-- Remodeling -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.8s">
+                                <i class="fas fa-paint-roller service-icon"></i>
+                                <h5>Remodeling</h5>
+                                <p>Professional remodeling services tailored to your vision and budget.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                  </div>
+              </div>
+          </div>
+          
+    
+              <!-- Monthly Subscriptions -->
+              
+      
+              
+
+  <!-------Why Choose Us Start------->
+  <section class="team section-padding" data-scroll-index='3'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>Why Choose Us</h3>
+            <span class="line"></span>
+            <div class="opening-paragraph">
+              <p class="lead">
+                At <span class="highlight-text">Turn-Key Pro</span>, we don't just fix homes—we fix the <span class="highlight-text">stress of homeownership</span>. Born from a frustration with unreliable contractors and surprise repair bills, we built a service that puts your <span class="highlight-text">peace of mind first</span>.
+              </p>
+              <p class="lead">
+                Our <span class="highlight-text">subscription plans</span> eliminate the guesswork (and the headaches) by pairing <span class="highlight-text">proactive maintenance</span> with <span class="highlight-text">24/7 emergency support</span>—all for a predictable monthly rate.
+              </p>
+              <p class="lead">
+                Whether it's a leaking pipe at midnight or routine upkeep to prevent costly disasters, our <span class="highlight-text">vetted technicians</span> treat your home like their own. No more chasing down "Chuck in a Truck." Just <span class="highlight-text">done-for-you care</span>, so you can focus on what matters most.
+              </p>
+            </div>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                  <i class="fa fa-dollar-sign" aria-hidden="true"></i>
+                  <h5>Fixed Monthly Pricing</h5>
+                  <p>No surprises—just predictable, affordable pricing for all your home maintenance needs.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                  <i class="fa fa-clock" aria-hidden="true"></i>
+                  <h5>Convenient Scheduling</h5>
+                  <p>Flexible time slots to fit your busy lifestyle.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s">
+                  <i class="fa fa-headset" aria-hidden="true"></i>
+                  <h5>24/7 Support</h5>
+                  <p>We're always here to help, day or night.</p>
+                </div>
+              </div>
+            </div> <!-- row -->
+          </div> <!-- section-content -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+
+
+<!-------Why Choose Us End-------> <section class="image-text-section section-padding d-flex justify-content-center text-center">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      
+      <!-- Left Side: Text Content -->
+      <div class="col-md-8 text-content">
+        <h3>Fine, It Sounds Like a Good Idea...But</h3>
+        <p>
+          Is it right for me? Well, that really depends. Let's qualify you first.<br><br>
+
+          Do you have repair and routine requirements for your home? <strong></strong> <br><br>
+
+          Do you sometimes forget to do routine work around your home? <strong></strong> <br><br>
+
+          Do you have $119 a month in your budget to invest in your property? <strong></strong> <br><br>
+
+          <strong>If you answered Yes, Surprise! You're qualified!</strong>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+        
+        </div>
+  
+        <!-- Right Side: Image -->
+        <div class="col-md-6">
+          <img src= alt="Descriptive Alt Text" class="img-fluid">
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+    
+  </div>
+</section>
+<!-------Contact End------->
+<section class="kiss-method section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h3>Our "KISS" Method</h3>
+        <p>
+            <strong>Keeping it simple, silly!</strong>
+        </p>
+        <p>
+            Say goodbye to the headache of home repairs. With our <strong>easy, hassle-free subscription</strong>, 
+            you get <strong>reliable, high-quality maintenance</strong> whenever you need it—
+            <strong>without the stress</strong> of unexpected costs or unreliable contractors.
+        </p>
+        <p>
+            Our <strong>monthly packages</strong> are designed to <strong>protect your home</strong>, 
+            keep things running smoothly, and <strong>save you money</strong>—all for a price that <strong>makes sense</strong>.
+        </p>
+        <ul class="list-unstyled">
+            <li><strong>🔧 No more waiting.</strong></li>
+            <li><strong>🔨 No more guesswork.</strong></li>
+            <li><strong>🏡 Just peace of mind.</strong></li>
+        </ul>
+        <p><strong>Keep it simple. Subscribe today! 🚀</strong></p>
+        <div class="mt-4">
+          <a href="https://buy.stripe.com/7sI2bLaQj73zeK4289" class="cta-button">
+            Start with Bronze Plan - $119/month
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add a new CTA section before the subscription plans -->
+<section class="cta-section section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h3>Let Our Professionals Protect Your Home</h3>
+        <p class="lead">Join our growing community of satisfied homeowners who trust us with their home maintenance needs.</p>
+        <div class="mt-4">
+          <a href="https://buy.stripe.com/7sI2bLaQj73zeK4289" class="cta-button pulse-animation">
+            Start Your Bronze Plan Today - $119/month
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Subscription Packages Section -->
+<section class="subscription-plans section-padding" data-scroll-index="5">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="sectioner-header text-center">
+      <h3>Ready to Subscribe?</h3>
+      <span class="line"></span>
+      <p style="font-family: Arial, sans-serif; line-height: 1.6; margin: 20px;">
+        Looking for a hassle-free, superhero-on-standby solution for your home? Start with our 
+        <strong>Bronze Package ($119/Month)</strong>, which embraces the essentials with one hour of scheduled maintenance, 
+        24-hour emergency response, priority renovation scheduling, and quarterly inspection reports—perfect for keeping those 
+        pesky surprises at bay. Ready to level up? The <strong>Silver Package ($149/Month)</strong> includes everything in Bronze 
+        plus an extra hour of monthly maintenance, lightning-fast emergency response, enhanced priority scheduling, and thorough 
+        inspections, so you can finally check off those "I'll do it later" tasks without guilt. Want the VIP treatment? 
+        Step up to our <strong>Gold Package ($225/Month)</strong> for three hours of monthly maintenance, quarterly reports, rapid 
+        fixes, priority access to our pro network, discounted contracting labor, and even two annual cosmetic overhauls—it's like 
+        having a personal home concierge. Don't wait—spots fill up faster than a new streaming service binge, so lock in your 
+        plan now and give your home the care it deserves!
+      </p>
+      
+    </div>
+
+    <!-- Buttons Row -->
+    <div class="row justify-content-center">
+      <!-- Bronze Button -->
+      <div class="col-md-4 d-flex justify-content-center">
+        <a href="https://buy.stripe.com/7sI2bLaQj73zeK4289" class="cta-button" style="margin: 10px;">
+          Bronze $119
+        </a>
+      </div>
+
+      <!-- Silver Button -->
+      <div class="col-md-4 d-flex justify-content-center">
+        <a href="https://buy.stripe.com/8wMaIh4rVafLeK4eUW" class="cta-button" style="margin: 10px;">
+          Silver $149
+        </a>
+      </div>
+
+      <!-- Gold Button -->
+      <div class="col-md-4 d-flex justify-content-center">
+        <a href="https://buy.stripe.com/dR68A90bF87D6dy7ss" class="cta-button" style="margin: 10px;">
+          Gold $225
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section Start -->
+<section class="contact section-padding" data-scroll-index='4'>
+  <div class="container">
+    <div class="sectioner-header text-center">
+            <h3>Get Started Today</h3>
+      <span class="line"></span>
+            <p>Take the first step towards worry-free home maintenance</p>
+        </div>
+
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="contact-info-box">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="content">
+                            <h5>Call Us 24/7</h5>
+                            <p><a href="tel:9205398814">(920) 539-8814</a></p>
+                            <span>Available for emergencies</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="content">
+                            <h5>Email Us</h5>
+                            <p><a href="mailto:Alexanderjahn79@yahoo.com">Alexanderjahn79@yahoo.com</a></p>
+                            <span>We'll respond within 24 hours</span>
+                        </div>
+    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="content">
+                            <h5>Service Area</h5>
+                            <p>SE Wisconsin</p>
+                            <span>Available in your local area</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h5>Connect With Us</h5>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=100091914262358" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <!-- Add other social media links as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8 col-md-12">
+                <div class="contact-form-box">
+                    <h4>Schedule Your Free Consultation</h4>
+                    <form id="consultationForm" class="consultation-form" action="https://formsubmit.co/Alexanderjahn79@yahoo.com" method="POST">
+      <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="tel" name="phone" class="form-control" placeholder="Your Phone" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select name="package" class="form-control" required>
+                                        <option value="">Select Package</option>
+                                        <option value="Bronze">Bronze Plan ($119/month)</option>
+                                        <option value="Silver">Silver Plan ($149/month)</option>
+                                        <option value="Gold">Gold Plan ($225/month)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" rows="4" 
+                                        placeholder="Tell us about your home maintenance needs"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="cta-button">Schedule Consultation</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Contact Section End -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/scrollIt.min.js"></script>
+  <script>
+    // Initialize WOW.js
+    new WOW().init();
+    
+    // Initialize ScrollIt
+    $(function() {
+      $.scrollIt();
+    });
+
+    // Initialize Bootstrap dropdowns
+    $(document).ready(function() {
+      // Enable all dropdowns
+      $('.dropdown-toggle').dropdown();
+      
+      // Close dropdowns when clicking outside
+      $(document).click(function(e) {
+        if (!$(e.target).closest('.dropdown').length) {
+          $('.dropdown-menu').removeClass('show');
+        }
+      });
+    });
+  </script>
+
+<!-- Subscription Journey Section -->
+<section class="journey-section section-padding">
+    <div class="container">
+        <div class="sectioner-header text-center">
+            <h3>Your Journey to Hassle-Free Home Maintenance</h3>
+            <span class="line"></span>
+            <p>Four simple steps to join the Turn-Key Pro Services family</p>
+        </div>
+
+        <div class="journey-timeline">
+            <!-- Step 1 -->
+            <div class="journey-step wow fadeInUp" data-wow-delay="0.2s">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-hand-pointer"></i>
+                    </div>
+                    <h4>Choose Your Plan</h4>
+                    <p>Select from our Bronze ($119), Silver ($149), or Gold ($225) monthly plans based on your home's needs.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>No long-term contracts</li>
+                            <li>Flexible coverage options</li>
+                            <li>Cancel anytime</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="journey-step wow fadeInUp" data-wow-delay="0.4s">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4>Home Assessment</h4>
+                    <p>We'll visit your home for a thorough inspection and create your customized maintenance plan.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Complete home evaluation</li>
+                            <li>Identify priority areas</li>
+                            <li>Document current conditions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="journey-step wow fadeInUp" data-wow-delay="0.6s">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>Schedule Service</h4>
+                    <p>We'll set up your regular maintenance schedule and address any immediate concerns.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Flexible scheduling</li>
+                            <li>Priority booking</li>
+                            <li>24/7 emergency access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="journey-step wow fadeInUp" data-wow-delay="0.8s">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h4>Enjoy Peace of Mind</h4>
+                    <p>Relax knowing your home is being maintained by professionals year-round.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Regular updates</li>
+                            <li>Preventive maintenance</li>
+                            <li>Ongoing support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="journey-cta text-center mt-5">
+            <h4>Ready to Get Started?</h4>
+            <a href="https://buy.stripe.com/7sI2bLaQj73zeK4289" class="cta-button pulse-animation">
+                Begin Your Journey with Bronze Plan - $119/month
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Copyright Section -->
+<div class="copyright-section">
+    <div class="container">
+        <div class="text-center py-3">
+            2024 © Turn Key Pro Services. Website Designed by Media department
+        </div>
+    </div>
+</div>
+
+<!-- Floating CTA Button -->
+<div class="floating-cta">
+    <a href="https://buy.stripe.com/dR68A90bF87D6dy7ss" class="floating-cta-button">
+        <i class="fas fa-rocket"></i>
+        Subscribe Now
+    </a>
+</div>
+
+</body>
+</html>

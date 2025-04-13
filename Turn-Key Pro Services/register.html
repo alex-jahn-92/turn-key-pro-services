@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Register - Turn Key Pro Services</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+
+  <!-- Override old purple colors with a new yellow color scheme -->
+  <style>
+    /* Global Colors */
+    :root {
+      --primary-yellow: #FFC107;
+      --primary-yellow-dark: #FFA000;
+      --dark-text: #333;
+      --white-text: #FFF;
+    }
+
+    /* Direct control of the logo size with circular shape */
+    .company-logo {
+        width: 244px !important;
+        height: 244px !important;
+        max-width: 244px !important;
+        display: block !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 3px solid var(--primary-yellow-dark) !important;
+    }
+
+    /* Update container to match new size */
+    .logo-container {
+        width: 244px !important;
+        height: 244px !important;
+        margin: 0 auto !important;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    /* Navigation container styles */
+    .nav-container {
+        width: 100% !important;
+        background-color: var(--primary-yellow-dark) !important;
+        padding: 15px 0 !important;
+    }
+
+    /* Inner navigation wrapper */
+    .nav-inner {
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+    }
+
+    /* Navigation menu list */
+    .nav-menu {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    /* Individual menu items */
+    .nav-menu li {
+        flex: 1 !important;
+        text-align: center !important;
+    }
+
+    .nav-menu li a {
+        color: white !important;
+        text-decoration: none !important;
+        font-size: 16px !important;
+        padding: 10px 15px !important;
+        display: block !important;
+        transition: all 0.3s ease !important;
+    }
+
+    /* Hover effect */
+    .nav-menu li a:hover {
+        color: var(--dark-text) !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Active link */
+    .nav-menu li a.active {
+        color: var(--dark-text) !important;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .nav-menu {
+            flex-direction: column !important;
+            gap: 10px !important;
+        }
+        
+        .nav-menu li {
+            width: 100% !important;
+        }
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown-menu {
+        background-color: var(--primary-yellow) !important;
+        border: none !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+        padding: 10px 0 !important;
+        min-width: 200px !important;
+    }
+
+    .dropdown-item {
+        color: var(--white-text) !important;
+        padding: 8px 20px !important;
+        font-size: 14px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .dropdown-item:hover {
+        background-color: var(--primary-yellow-dark) !important;
+        color: var(--dark-text) !important;
+    }
+
+    .dropdown-item i {
+        margin-right: 10px !important;
+        width: 20px !important;
+        text-align: center !important;
+    }
+
+    .dropdown-divider {
+        border-top: 1px solid rgba(255,255,255,0.2) !important;
+        margin: 8px 0 !important;
+    }
+
+    .dropdown-toggle::after {
+        margin-left: 8px !important;
+    }
+
+    .nav-link.dropdown-toggle {
+        color: var(--white-text) !important;
+    }
+
+    .nav-link.dropdown-toggle:hover {
+        color: var(--dark-text) !important;
+    }
+
+    /* Registration Form Styles */
+    .login-box {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .sectioner-header {
+        margin-bottom: 30px;
+    }
+
+    .sectioner-header .line {
+        display: block;
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-yellow-dark);
+        margin: 20px auto;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        border: 1px solid #ddd;
+        padding: 12px;
+        border-radius: 5px;
+    }
+
+    /* Make the subscription plan selector wider */
+    #subscriptionPlan {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px !important;
+        font-size: 16px !important;
+        background-color: white !important;
+        border: 1px solid #ddd !important;
+        border-radius: 5px !important;
+        cursor: pointer !important;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 12px center !important;
+        background-size: 15px !important;
+    }
+
+    .form-control:focus {
+        border-color: var(--primary-yellow);
+        box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+    }
+
+    .cta-button {
+        background-color: var(--primary-yellow-dark) !important;
+        color: var(--white-text) !important;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        border: none;
+        width: 100%;
+    }
+
+    .cta-button:hover {
+        background-color: var(--primary-yellow) !important;
+        color: var(--dark-text) !important;
+    }
+
+    /* Footer Styles */
+    .main-footer {
+        background-color: var(--primary-yellow);
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .social-links {
+        margin-bottom: 10px;
+    }
+
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        color: var(--primary-yellow);
+        font-size: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        color: var(--primary-yellow-dark);
+    }
+
+    .copyright-text {
+        color: white;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* Floating CTA Button */
+    .floating-cta {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .floating-cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--primary-yellow-dark);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+
+    .floating-cta-button:hover {
+        background-color: var(--primary-yellow);
+        color: var(--dark-text);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .footer-content {
+            padding: 0 20px;
+        }
+        
+        .floating-cta {
+            bottom: 10px;
+            right: 10px;
+        }
+        
+        .floating-cta-button {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Simple Centered Header -->
+  <header class="main-header">
+    <!-- Logo Container with strict size control -->
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/FB_IMG_1741285493669.jpg" 
+             alt="Turn-Key Pro Services Logo" 
+             class="company-logo">
+      </div>
+    </div>
+    
+    <!-- Navigation with forced center alignment -->
+    <div class="nav-container">
+      <div class="nav-inner">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why-choose-us.html">Why Choose Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> Account
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+              <a class="dropdown-item" href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt"></i> My Dashboard</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Registration Section -->
+  <section class="login-section section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="login-box">
+            <div class="sectioner-header text-center">
+              <h3>Create Your Account</h3>
+              <span class="line"></span>
+              <p>Join Turn-Key Pro Services to access our member benefits</p>
+            </div>
+
+            <form id="registrationForm" class="login-form" action="process_registration.php" method="POST">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                    <small class="form-text text-muted">Minimum 8 characters with at least one number and one letter</small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subscriptionPlan">Select Your Subscription Plan</label>
+                <select class="form-control" id="subscriptionPlan" name="subscriptionPlan" required>
+                  <option value="">Choose a plan</option>
+                  <option value="bronze">Bronze Plan ($119/month)</option>
+                  <option value="silver">Silver Plan ($149/month)</option>
+                  <option value="gold">Gold Plan ($225/month)</option>
+                </select>
+              </div>
+
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">
+                  I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>
+                </label>
+              </div>
+
+              <button type="submit" class="cta-button">Create Account</button>
+
+              <div class="text-center mt-3">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100091914262358" 
+                   class="social-icon" 
+                   target="_blank" 
+                   title="Follow us on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            
+            <!-- Copyright Text -->
+            <div class="copyright-text">
+                2024 © Turn Key Pro Services. Website Designed by Media department
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA Button -->
+  <div class="floating-cta">
+    <a href="https://buy.stripe.com/7sI2bLaQj73zeK4289" class="floating-cta-button">
+        <i class="fas fa-rocket"></i>
+        Subscribe Now
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    // Initialize WOW.js
+    new WOW().init();
+    
+    // Initialize Bootstrap dropdowns
+    $(document).ready(function() {
+      // Enable all dropdowns
+      $('.dropdown-toggle').dropdown();
+      
+      // Close dropdowns when clicking outside
+      $(document).click(function(e) {
+        if (!$(e.target).closest('.dropdown').length) {
+          $('.dropdown-menu').removeClass('show');
+        }
+      });
+    });
+
+    // Password validation
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      
+      if (password !== confirmPassword) {
+        e.preventDefault();
+        alert('Passwords do not match!');
+        return false;
+      }
+
+      // Password strength validation
+      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        e.preventDefault();
+        alert('Password must be at least 8 characters long and contain at least one letter and one number');
+        return false;
+      }
+    });
+  </script>
+</body>
+</html> 

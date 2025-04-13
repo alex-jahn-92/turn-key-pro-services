@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Turn Key Pro Services - Why Choose Us</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+
+  <style>
+    /* Global Colors */
+    :root {
+      --primary-yellow: #FFC107;
+      --primary-yellow-dark: #FFA000;
+      --dark-text: #333;
+      --white-text: #FFF;
+    }
+
+    /* Direct control of the logo size with circular shape */
+    .company-logo {
+        width: 244px !important;
+        height: 244px !important;
+        max-width: 244px !important;
+        display: block !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 3px solid var(--primary-yellow-dark) !important;
+    }
+
+    /* Update container to match new size */
+    .logo-container {
+        width: 244px !important;
+        height: 244px !important;
+        margin: 0 auto !important;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    /* Navigation container styles */
+    .nav-container {
+        width: 100% !important;
+        background-color: var(--primary-yellow-dark) !important;
+        padding: 15px 0 !important;
+    }
+
+    /* Inner navigation wrapper */
+    .nav-inner {
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+    }
+
+    /* Navigation menu list */
+    .nav-menu {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    /* Individual menu items */
+    .nav-menu li {
+        flex: 1 !important;
+        text-align: center !important;
+    }
+
+    .nav-menu li a {
+        color: white !important;
+        text-decoration: none !important;
+        font-size: 16px !important;
+        padding: 10px 15px !important;
+        display: block !important;
+        transition: all 0.3s ease !important;
+    }
+
+    /* Hover effect */
+    .nav-menu li a:hover {
+        color: var(--dark-text) !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Active link */
+    .nav-menu li a.active {
+        color: var(--dark-text) !important;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .nav-menu {
+            flex-direction: column !important;
+            gap: 10px !important;
+        }
+        
+        .nav-menu li {
+            width: 100% !important;
+        }
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown-menu {
+        background-color: var(--primary-yellow) !important;
+        border: none !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+        padding: 10px 0 !important;
+        min-width: 200px !important;
+    }
+
+    .dropdown-item {
+        color: var(--white-text) !important;
+        padding: 8px 20px !important;
+        font-size: 14px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .dropdown-item:hover {
+        background-color: var(--primary-yellow-dark) !important;
+        color: var(--dark-text) !important;
+    }
+
+    .dropdown-item i {
+        margin-right: 10px !important;
+        width: 20px !important;
+        text-align: center !important;
+    }
+
+    .dropdown-divider {
+        border-top: 1px solid rgba(255,255,255,0.2) !important;
+        margin: 8px 0 !important;
+    }
+
+    .dropdown-toggle::after {
+        margin-left: 8px !important;
+    }
+
+    .nav-link.dropdown-toggle {
+        color: var(--white-text) !important;
+    }
+
+    .nav-link.dropdown-toggle:hover {
+        color: var(--dark-text) !important;
+    }
+
+    /* Footer Styles */
+    .main-footer {
+        background-color: var(--primary-yellow-dark);
+        padding: 30px 0;
+        color: white;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icon {
+        color: white;
+        font-size: 20px;
+        transition: color 0.3s ease;
+    }
+
+    .social-icon:hover {
+        color: var(--dark-text);
+    }
+
+    .copyright-text {
+        font-size: 14px;
+    }
+
+    /* Floating CTA Button */
+    .floating-cta {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .floating-cta-button {
+        background-color: var(--primary-yellow);
+        color: var(--dark-text);
+        padding: 15px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+
+    .floating-cta-button:hover {
+        background-color: var(--primary-yellow-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    /* CTA Button Styles */
+    .cta-button {
+        background-color: var(--primary-yellow-dark) !important;
+        color: var(--white-text) !important;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: var(--primary-yellow) !important;
+        color: var(--dark-text) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* CTA Section Styles */
+    .cta-section {
+        background-color: #f8f9fa;
+        padding: 40px 0;
+        margin-top: 40px;
+    }
+
+    .cta-section h3 {
+        color: var(--dark-text);
+        margin-bottom: 15px;
+    }
+
+    .cta-section p {
+        color: #666;
+        margin-bottom: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Simple Centered Header -->
+  <header class="main-header">
+    <!-- Logo Container with strict size control -->
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/FB_IMG_1741285493669.jpg" 
+             alt="Turn-Key Pro Services Logo" 
+             class="company-logo">
+      </div>
+    </div>
+    
+    <!-- Navigation with forced center alignment -->
+    <div class="nav-container">
+      <div class="nav-inner">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why-choose-us.html" class="active">Why Choose Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> Account
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+              <a class="dropdown-item" href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <h2>Why Choose Turn Key Pro Services?</h2>
+            <div class="line"></div>
+            <p>Discover what sets us apart from the competition, At Turn-Key Pro, we don’t just fix homes—we fix the stress of homeownership. Born from a frustration with unreliable contractors and surprise repair bills, we built a service that puts your peace of mind first. Our subscription plans eliminate the guesswork (and the headaches) by pairing proactive maintenance with 24/7 emergency support—all for a predictable monthly rate. Whether it’s a leaking pipe at midnight or routine upkeep to prevent costly disasters, our vetted technicians treat your home like their own. No more chasing down "Chuck in a Truck." Just done-for-you care, so you can focus on what matters most.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3>Experienced Professionals</h3>
+            <p>Our team consists of highly skilled professionals with years of experience in the industry.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Timely Service</h3>
+            <p>We respect your time and ensure all projects are completed on schedule.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3>Competitive Pricing</h3>
+            <p>We offer high-quality services at competitive prices with no hidden fees.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Quality Assurance</h3>
+            <p>We maintain the highest standards of quality in all our services.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Customer Focus</h3>
+            <p>Your satisfaction is our top priority, and we go the extra mile to ensure it.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Comprehensive Services</h3>
+            <p>We offer a wide range of services to meet all your property maintenance needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <h2>What Our Clients Say</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial-box">
+            <div class="testimonial-content">
+              <p>"Turn Key Pro Services exceeded our expectations. Their team was professional, efficient, and delivered outstanding results."</p>
+              <div class="client-info">
+                <img src="images/user1.jpg" alt="Client 1" class="client-img">
+                <h4>John Smith</h4>
+                <p>Homeowner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-box">
+            <div class="testimonial-content">
+              <p>"We've been using Turn Key Pro Services for years. Their consistent quality and reliability make them our go-to service provider."</p>
+              <div class="client-info">
+                <img src="images/user2.jpg" alt="Client 2" class="client-img">
+                <h4>Sarah Johnson</h4>
+                <p>Business Owner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-box">
+            <div class="testimonial-content">
+              <p>"The team at Turn Key Pro Services is amazing. They completed our project on time and within budget. Highly recommended!"</p>
+              <div class="client-info">
+                <img src="images/user3.jpg" alt="Client 3" class="client-img">
+                <h4>Michael Brown</h4>
+                <p>Property Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3>Ready to Experience the Difference?</h3>
+          <p>Contact us today to discuss your needs and get started.</p>
+          <a href="https://buy.stripe.com/7sI2bLaQj73zeK4289" class="cta-button">Subscribe Now</a>
+          <a href="contact.html" class="cta-button">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100091914262358" 
+                   class="social-icon" 
+                   target="_blank" 
+                   title="Follow us on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            
+            <!-- Copyright Text -->
+            <div class="copyright-text">
+                2024 © Turn Key Pro Services. Website Designed by Media department
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA Button -->
+  <div class="floating-cta">
+      <a href="https://buy.stripe.com/7sI2bLaQj73zeK4289" class="floating-cta-button">
+          <i class="fas fa-rocket"></i>
+          Subscribe Now
+      </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/scrollIt.min.js"></script>
+  <script>
+    new WOW().init();
+    $(function() {
+      $.scrollIt();
+    });
+  </script>
+</body>
+</html> 

@@ -1,0 +1,40 @@
+/* responsive.css */
+
+/* For devices with width up to 768px (tablets, small screens) */
+@media (max-width: 768px) {
+    .banner .banner-text h2 {
+      font-size: 2rem;
+    }
+    .banner .banner-text h6 {
+      font-size: 1.1rem;
+    }
+    .navbar .nav-link {
+      font-size: 0.9rem;
+    }
+    .sectioner-header h3 {
+      font-size: 1.75rem;
+    }
+  }
+  
+  /* For devices with width up to 480px (mobile phones) */
+  @media (max-width: 480px) {
+    .banner {
+      padding: 60px 0;
+    }
+    .banner .banner-text h2 {
+      font-size: 1.75rem;
+    }
+    .banner .banner-text h6 {
+      font-size: 1rem;
+    }
+    .cta-button {
+      padding: 10px 20px;
+    }
+    .navbar .nav-link {
+      font-size: 0.85rem;
+    }
+    .sectioner-header h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
